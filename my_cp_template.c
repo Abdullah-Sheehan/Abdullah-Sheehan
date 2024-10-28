@@ -32,7 +32,7 @@ using namespace std;
     cin >> t; \
     while (t--)
 #define test1  \
-    int t = 1;    \
+    int t = 1; \
     while (t--)
 #define boost_my_code                 \
     ios_base::sync_with_stdio(false); \
@@ -52,11 +52,6 @@ using namespace std;
 #define mem1(arr) memset(arr, -1, sizeof(arr));
 #define READ(f) freopen(f, "r", stdin)
 #define WRITE(f) freopen(f, "w", stdout)
-#define READ_WRITE \
-  #ifndef ONLINE_JUDGE \
-    READ("in.txt");  \
-    WRITE("out.txt");   \
-  #endif // ONLINE_JUDGE  
 #define nl printf("\n");
 
 /*
@@ -111,12 +106,14 @@ void solve();
 int main()
 {
     boost_my_code;
-    READ_WRITE;
+#ifndef ONLINE_JUDGE
+    READ("in.txt");
+    WRITE("out.txt");
+#endif // ONLINE_JUDGE
     test { solve(); }
     return 0;
 }
 
 void solve()
 {
-    
 }
