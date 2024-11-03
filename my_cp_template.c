@@ -159,7 +159,7 @@ int main()
     READ("in.txt");
     WRITE("out.txt");
 #endif // ONLINE_JUDGE
-    test1 { solve(); }
+    test { solve(); }
     return 0;
 }
 
