@@ -11,18 +11,19 @@ using namespace std;
 #define msl map<string, ll>
 #define mll map<ll, ll>
 #define mls map<ll, string>
+#define mss map<string, string>
+#define sll set<ll>
 #define mp make_pair
 #define pb push_back
 #define popb pop_back
 #define sort(v) sort(v.begin(), v.end())
 #define reverse(v) reverse(v.begin(), v.end())
 #define count(v, p) count(v.begin(), v.end(), p)
+#define all(v) v.begin(), v.end()
 #define popcount __builtin_popcount
 #define clz __builtin_clz
 #define ctz __builtin_ctz
 #define parity __builtin_parity
-#define F first
-#define S second
 #define gcd __gcd
 #define elif else if
 #define ub upper_bound
@@ -39,12 +40,6 @@ using namespace std;
     cin.tie(NULL);                    \
     cout.tie(NULL);
 #define after(x) cout << fixed << setprecision(x)
-#define outloop(arr, n)         \
-    for (int i = 0; i < n; i++) \
-        cout << arr[i] << " ";
-#define outloop2(v)                    \
-    for (int i = 0; i < v.size(); i++) \
-        cout << v[i] << " ";
 #define MOD 1000000007
 #define mod 998244353
 #define INF 1 << 30
@@ -64,7 +59,13 @@ typedef long double ldb;
 /*
 =======================================End Of Typedefs=================================================================================================================================
 */
+
+// Function Definitions
+
 ll lcm(ll x, ll y) { return (x * y) / gcd(x, y); }
+
+void dbg(string s) { cout << s << endl; }
+
 bool isPalindrome(string::iterator low, string::iterator high)
 {
     while (low < high)
@@ -76,7 +77,7 @@ bool isPalindrome(string::iterator low, string::iterator high)
     }
     return true;
 }
-void dbg(string s) { cout << s << endl; }
+
 ll bigmod(ll a, ll b, ll prime)
 {
     ll res = 1;
@@ -101,6 +102,54 @@ ll bigmod(ll a, ll b, ll prime)
     }
     return res;
 }
+
+int countStrictlySmaller(const vector<ll> &vec, ll value)
+{
+    return lower_bound(vec.begin(), vec.end(), value) - vec.begin();
+}
+
+int countEqualOrSmaller(const vector<ll> &vec, ll value)
+{
+    return upper_bound(vec.begin(), vec.end(), value) - vec.begin();
+}
+
+int countStrictlyLarger(const vector<ll> &vec, ll value)
+{
+    return vec.end() - upper_bound(vec.begin(), vec.end(), value);
+}
+
+int countEqualOrLarger(const vector<ll> &vec, ll value)
+{
+    return vec.end() - lower_bound(vec.begin(), vec.end(), value);
+}
+
+bool existsInVector(const vector<ll> &vec, ll value)
+{
+    auto it = lower_bound(vec.begin(), vec.end(), value);
+    return it != vec.end() && *it == value;
+}
+
+int countInRangeInclusive(const vector<ll> &vec, ll l, ll r)
+{
+    auto lower = lower_bound(vec.begin(), vec.end(), l);
+    auto upper = upper_bound(vec.begin(), vec.end(), r);
+    return upper - lower;
+}
+
+ll max(ll a, ll b)
+{
+    if (a > b)
+        return a;
+    return b;
+}
+
+ll min(ll a, ll b)
+{
+    if (a < b)
+        return a;
+    return b;
+}
+
 void solve();
 
 int main()
@@ -110,10 +159,11 @@ int main()
     READ("in.txt");
     WRITE("out.txt");
 #endif // ONLINE_JUDGE
-    test { solve(); }
+    test1 { solve(); }
     return 0;
 }
 
 void solve()
 {
+    // dbg("--------------------");
 }
