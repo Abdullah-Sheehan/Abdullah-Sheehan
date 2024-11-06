@@ -1,6 +1,6 @@
 {
-  "mycptemplate": {
-    "prefix": "cppTemplate",
+  "MyCompetitiveProgrammingTemplate": {
+    "prefix": "cpTemplate",
     "body": [
       "#include <bits/stdc++.h>",
       "using namespace std;",
@@ -39,6 +39,8 @@
       "#define test1  \\",
       "    int t = 1; \\",
       "    while (t--)",
+      "#define print(v) for(int i = 0; i < v.size(); i++)cout << v[i] << \" \";",
+      "    cout << endl;",     
       "#define boost_my_code                 \\",
       "    ios_base::sync_with_stdio(false); \\",
       "    cin.tie(NULL);                    \\",
