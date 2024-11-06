@@ -28,6 +28,10 @@ using namespace std;
 #define elif else if
 #define ub upper_bound
 #define lb lower_bound
+#define print(v)                       \
+    for (int i = 0; i < v.size(); i++) \
+        cout << v[i] << " ";           \
+    cout << endl;
 #define test  \
     int t;    \
     cin >> t; \
