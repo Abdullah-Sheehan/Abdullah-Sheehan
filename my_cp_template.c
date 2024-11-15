@@ -35,7 +35,7 @@ using namespace std;
 #define test  \
     int t;    \
     cin >> t; \
-    while (t--)
+    for (int i = 1; i <= t; i++)
 #define test1  \
     int t = 1; \
     while (t--)
@@ -163,7 +163,7 @@ int main()
     READ("in.txt");
     WRITE("out.txt");
 #endif // ONLINE_JUDGE
-    test { solve(); }
+    test1 { solve(); }
     return 0;
 }
 
